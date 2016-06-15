@@ -1,10 +1,17 @@
-#app {
-    width: 90%;
+.searchBox {
+    /*width: 90%;*/
     background-color: #D5DFC2;
-    margin-left: auto;
+/*    margin-left: auto;
     margin-right: auto;
-}
+*/}
 
 .mainSearch {
     width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    padding: 20px;
 }
