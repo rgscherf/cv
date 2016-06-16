@@ -2,23 +2,23 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class TwitIndex extends CI_Controller {
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * http://example.com/index.php/welcome
-     *    - or -
-     * http://example.com/index.php/welcome/index
-     *    - or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see http://codeigniter.com/user_guide/general/urls.html
-     */
     public function index() {
         $this->load->helper('url');
         $this->load->view('init_search');
+    }
+
+    public function getUser($search) {
+        // http://docs.guzzlephp.org/en/latest/
+        // GuzzleHTTP is great
+
+        $url = 'https://api.github.com/users/'.$search;
+        $client = new GuzzleHttp\Client();
+        
+        $req = $client->request('GET', $url);
+        $res = $req->getBody();
+
+        // return did not work,
+        // but echoing result did...
+        echo $res;
     }
 }

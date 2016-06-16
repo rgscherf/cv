@@ -8,13 +8,31 @@
 
 var SearchBox = React.createClass({
     getInitialState: function() {
-        return {search: ""};
+        return {searchQuery: ""};
     },
     keyDown: function(e) {
         if (e.key === 'Enter') {
             var s = e.target.value;
-            this.setState({search: s});
+            this.setState({searchQuery: s});
+            this.loadCommentsFromServer(s);
         }
+    },
+    loadCommentsFromServer: function(query) {
+        var u = 'http://localhost:5000/index.php/twit/' + query;
+        console.log(u);
+        $.ajax( u, {
+            type: 'POST',
+            dataType: 'json',
+            cache: false,
+            success: function(data) {
+                console.log("success!");
+                console.log(data);
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.log("fail");
+                console.error(xhr, status);
+            }.bind(this)
+        });
     },
     render: function() {
         return (

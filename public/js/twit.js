@@ -7,32 +7,50 @@
 //
 
 var SearchBox = React.createClass({
-    displayName: "SearchBox",
+    displayName: 'SearchBox',
 
     getInitialState: function () {
-        return { search: "" };
+        return { searchQuery: "" };
     },
     keyDown: function (e) {
         if (e.key === 'Enter') {
             var s = e.target.value;
-            this.setState({ search: s });
+            this.setState({ searchQuery: s });
+            this.loadCommentsFromServer(s);
         }
+    },
+    loadCommentsFromServer: function (query) {
+        var u = 'http://localhost:5000/index.php/twit/' + query;
+        console.log(u);
+        $.ajax(u, {
+            type: 'POST',
+            dataType: 'json',
+            cache: false,
+            success: function (data) {
+                console.log("success!");
+                console.log(data);
+            }.bind(this),
+            error: function (xhr, status, err) {
+                console.log("fail");
+                console.error(xhr, status);
+            }.bind(this)
+        });
     },
     render: function () {
         return React.createElement(
-            "div",
+            'div',
             null,
             React.createElement(
-                "div",
-                { className: "searchBox" },
+                'div',
+                { className: 'searchBox' },
                 React.createElement(
-                    "div",
-                    { className: "logo" },
-                    "Twit"
+                    'div',
+                    { className: 'logo' },
+                    'Twit'
                 ),
-                React.createElement("input", { type: "text",
-                    placeholder: "Find a github user name",
-                    className: "mainSearch",
+                React.createElement('input', { type: 'text',
+                    placeholder: 'Find a github user name',
+                    className: 'mainSearch',
                     onKeyDown: this.keyDown })
             ),
             React.createElement(ContentContainer, null)
@@ -42,12 +60,12 @@ var SearchBox = React.createClass({
 });
 
 var ContentContainer = React.createClass({
-    displayName: "ContentContainer",
+    displayName: 'ContentContainer',
 
     render: function () {
         return React.createElement(
-            "div",
-            { className: "contentContainer" },
+            'div',
+            { className: 'contentContainer' },
             React.createElement(Sidebar, null),
             React.createElement(Timeline, null)
         );
@@ -55,16 +73,16 @@ var ContentContainer = React.createClass({
 });
 
 var Sidebar = React.createClass({
-    displayName: "Sidebar",
+    displayName: 'Sidebar',
 
     render: function () {
         return React.createElement(
-            "div",
-            { className: "sideBar" },
+            'div',
+            { className: 'sideBar' },
             React.createElement(
-                "p",
+                'p',
                 null,
-                "Hello, I am here in the Sidebar this evening."
+                'Hello, I am here in the Sidebar this evening.'
             )
         );
     }
@@ -72,16 +90,16 @@ var Sidebar = React.createClass({
 });
 
 var Timeline = React.createClass({
-    displayName: "Timeline",
+    displayName: 'Timeline',
 
     render: function () {
         return React.createElement(
-            "div",
-            { className: "timeline" },
+            'div',
+            { className: 'timeline' },
             React.createElement(
-                "p",
+                'p',
                 null,
-                "This is your pilot speaking, from the timeline view..."
+                'This is your pilot speaking, from the timeline view...'
             )
         );
     }
