@@ -1,17 +1,33 @@
 .searchBox {
-    /*width: 90%;*/
-    background-color: #D5DFC2;
-/*    margin-left: auto;
-    margin-right: auto;
-*/}
+    display: flex;
+    flex-direction: row;
+    height: 100;
+    align-items: center;
+    font-size: 3em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
+.logo {
+    width: 10%;
+    margin: auto;
+}
 .mainSearch {
     width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    padding: 20px;
+    font-size: 1em;
+}
+
+.contentContainer {
+}
+
+.sidebar {
+    padding: 10px;
+    float: left;
+    width: 30%;
+    background-color: pink;
+}
+
+.timeline {
+    padding: 10px;
+    background-color: green;
 }
