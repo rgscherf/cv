@@ -78,15 +78,16 @@ var Sidebar = React.createClass({
             <div className="sideBar shadow">
                 <img src={this.props.user.avatar_url}></img>
                 <div>
-                    <h1>{this.props.user.name}</h1>
+                    <span id="userName">{this.props.user.name}</span>
                 </div>
                 <div>
-                    <a href={this.props.user.html_url}>@{this.props.user.login}</a>
+                    <span id="userUrl">
+                        <a href={this.props.user.html_url}>{this.props.user.login}</a> - {this.props.user.public_repos} public repos
+                    </span>
                 </div>
             </div>
         );
     }
-
 });
 
 var Timeline = React.createClass({

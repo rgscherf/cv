@@ -106,8 +106,8 @@ var Sidebar = React.createClass({
                 "div",
                 null,
                 React.createElement(
-                    "h1",
-                    null,
+                    "span",
+                    { id: "userName" },
                     this.props.user.name
                 )
             ),
@@ -115,15 +115,20 @@ var Sidebar = React.createClass({
                 "div",
                 null,
                 React.createElement(
-                    "a",
-                    { href: this.props.user.html_url },
-                    "@",
-                    this.props.user.login
+                    "span",
+                    { id: "userUrl" },
+                    React.createElement(
+                        "a",
+                        { href: this.props.user.html_url },
+                        this.props.user.login
+                    ),
+                    " - ",
+                    this.props.user.public_repos,
+                    " public repos"
                 )
             )
         );
     }
-
 });
 
 var Timeline = React.createClass({

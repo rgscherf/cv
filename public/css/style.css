@@ -46,7 +46,7 @@ input[type=text] {
     padding: 10px;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #d31b21;
     background-color: #EDA639;
     color: black;
 }
@@ -66,6 +66,13 @@ input[type=text]:focus {
    color: black;  
 }
 
+a {
+    color: #d31b21;
+}
+a:visited {
+    color: #e64a2d;
+}
+
 
 .sidebar {
     padding: 10px;
@@ -74,26 +81,22 @@ input[type=text]:focus {
     background: #EDA639;
     margin-right: 20px;
 }
-
 .sidebar img {
     width: 100%;
     border: 1px solid black;
     margin-right: auto;
     margin-left: auto;
 }
-
 .sidebar p {
     font-size: 3em;
+}
+#userName {
+    font-size: 60px;
+}
+#userUrl {
+    font-size: 20px;
 }
 
 .timeline {
     padding: 10px;
-}
-
-h1 {
-    font-size: 60px;
-}
-
-h2 {
-    font-size: 48px;
 }
