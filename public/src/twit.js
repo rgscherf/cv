@@ -25,7 +25,8 @@ var SearchBox = React.createClass({
         }
     },
     loadCommentsFromServer: function(query) {
-        var u = 'http://localhost:5000/index.php/twit/' + query;
+        // var u = 'http://localhost:5000/index.php/twit/' + query;
+        var u = 'https://phptwit.herokuapp.com/index.php/twit/' + query;
         console.log(u);
         $.ajax( u, {
             type: 'POST',
