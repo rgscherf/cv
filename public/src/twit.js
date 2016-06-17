@@ -9,6 +9,7 @@
 var SearchBox = React.createClass({
     getInitialState: function() {
         return { 
+            error: false,
             user: {
                 avatar_url: "https://avatars.githubusercontent.com/u/8053315?v=3",
                 html_url: "https://github.com/rgscherf",
@@ -34,25 +35,35 @@ var SearchBox = React.createClass({
             cache: false,
             success: function(data) {
                 console.log(data);
-                this.setState({user: data});
+                this.setState({user: data, error: false});
             }.bind(this),
             error: function(xhr, status, err) {
-                console.error(xhr, status);
+                this.setState({error: true});
             }.bind(this)
         });
     },
     render: function() {
+        var err = this.state.error ? "Could not find that github user!" : "";
         return (
             <div>
                 <div className="searchBox shadow">
-                           <div className="titleBox">
-                               <div id="logo">Twit</div>
-                               <div id="definition"><i>V.  to taunt or ridicule <br/>with reference to anything embarrassing</i></div>
-                           </div>
-                    <input type="text" 
-                           placeholder="Find github user to twit" 
-                           className="mainSearch" 
-                           onKeyDown={this.keyDown}/>
+                    <div className="titleBox">
+                        <div id="logo">
+                            Twit
+                        </div>
+                        <div id="definition">
+                            <i>V.  to taunt or ridicule <br/>with reference to anything embarrassing</i>
+                        </div>
+                    </div>
+                    <div className="searchContainer">
+                        <input type="text" 
+                               placeholder="Find a github user to twit" 
+                               className="mainSearch" 
+                               onKeyDown={this.keyDown}/>
+                        <div className="searchError">
+                            {err}
+                        </div>
+                    </div>
                 </div>
                 <ContentContainer user={this.state.user}/>
             </div>

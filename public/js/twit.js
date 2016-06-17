@@ -11,6 +11,7 @@ var SearchBox = React.createClass({
 
     getInitialState: function () {
         return {
+            error: false,
             user: {
                 avatar_url: "https://avatars.githubusercontent.com/u/8053315?v=3",
                 html_url: "https://github.com/rgscherf",
@@ -36,14 +37,15 @@ var SearchBox = React.createClass({
             cache: false,
             success: function (data) {
                 console.log(data);
-                this.setState({ user: data });
+                this.setState({ user: data, error: false });
             }.bind(this),
             error: function (xhr, status, err) {
-                console.error(xhr, status);
+                this.setState({ error: true });
             }.bind(this)
         });
     },
     render: function () {
+        var err = this.state.error ? "Could not find that github user!" : "";
         return React.createElement(
             "div",
             null,
@@ -70,10 +72,19 @@ var SearchBox = React.createClass({
                         )
                     )
                 ),
-                React.createElement("input", { type: "text",
-                    placeholder: "Find github user to twit",
-                    className: "mainSearch",
-                    onKeyDown: this.keyDown })
+                React.createElement(
+                    "div",
+                    { className: "searchContainer" },
+                    React.createElement("input", { type: "text",
+                        placeholder: "Find a github user to twit",
+                        className: "mainSearch",
+                        onKeyDown: this.keyDown }),
+                    React.createElement(
+                        "div",
+                        { className: "searchError" },
+                        err
+                    )
+                )
             ),
             React.createElement(ContentContainer, { user: this.state.user })
         );
