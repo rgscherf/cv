@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Welcome to TWIT!</title>
+        <title>Twit - a timeline for github commits</title>
         <link rel="stylesheet" href="../css/style.css">
         <script type="text/javascript" src="../bower_components/react/react.js"></script>
         <script type="text/javascript" src="../bower_components/react/react-dom.min.js"></script>
