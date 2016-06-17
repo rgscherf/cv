@@ -145,7 +145,7 @@ var SearchBox = React.createClass({
         console.log(u);
         $.ajax( u, {
             type: 'POST',
-            dataType: 'json',
+            dataType: 'jsonp',
             cache: false,
             success: function(data) {
                 console.log(data);
