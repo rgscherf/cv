@@ -5,6 +5,7 @@
         <script type="text/javascript" src="../bower_components/react/react.js"></script>
         <script type="text/javascript" src="../bower_components/react/react-dom.min.js"></script>
         <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Open+Sans:300i,400" rel="stylesheet">
     </head>
     <body>
         <div id="app">

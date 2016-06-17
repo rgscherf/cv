@@ -7,15 +7,22 @@
 //
 
 var SearchBox = React.createClass({
-    displayName: 'SearchBox',
+    displayName: "SearchBox",
 
     getInitialState: function () {
-        return { searchQuery: "" };
+        return {
+            user: {
+                avatar_url: "https://avatars.githubusercontent.com/u/8053315?v=3",
+                html_url: "https://github.com/rgscherf",
+                login: "rgscherf",
+                name: "Rob Scherf",
+                public_repos: 14
+            }
+        };
     },
     keyDown: function (e) {
         if (e.key === 'Enter') {
             var s = e.target.value;
-            this.setState({ searchQuery: s });
             this.loadCommentsFromServer(s);
         }
     },
@@ -27,62 +34,91 @@ var SearchBox = React.createClass({
             dataType: 'json',
             cache: false,
             success: function (data) {
-                console.log("success!");
                 console.log(data);
+                this.setState({ user: data });
             }.bind(this),
             error: function (xhr, status, err) {
-                console.log("fail");
                 console.error(xhr, status);
             }.bind(this)
         });
     },
     render: function () {
         return React.createElement(
-            'div',
+            "div",
             null,
             React.createElement(
-                'div',
-                { className: 'searchBox' },
+                "div",
+                { className: "searchBox shadow" },
                 React.createElement(
-                    'div',
-                    { className: 'logo' },
-                    'Twit'
+                    "div",
+                    { className: "titleBox" },
+                    React.createElement(
+                        "div",
+                        { id: "logo" },
+                        "Twit"
+                    ),
+                    React.createElement(
+                        "div",
+                        { id: "definition" },
+                        React.createElement(
+                            "i",
+                            null,
+                            "V.  to taunt or ridicule ",
+                            React.createElement("br", null),
+                            "with reference to anything embarrassing"
+                        )
+                    )
                 ),
-                React.createElement('input', { type: 'text',
-                    placeholder: 'Find a github user name',
-                    className: 'mainSearch',
+                React.createElement("input", { type: "text",
+                    placeholder: "Find github user to twit",
+                    className: "mainSearch",
                     onKeyDown: this.keyDown })
             ),
-            React.createElement(ContentContainer, null)
+            React.createElement(ContentContainer, { user: this.state.user })
         );
     }
 
 });
 
 var ContentContainer = React.createClass({
-    displayName: 'ContentContainer',
+    displayName: "ContentContainer",
 
     render: function () {
         return React.createElement(
-            'div',
-            { className: 'contentContainer' },
-            React.createElement(Sidebar, null),
+            "div",
+            { className: "contentContainer" },
+            React.createElement(Sidebar, { user: this.props.user }),
             React.createElement(Timeline, null)
         );
     }
 });
 
 var Sidebar = React.createClass({
-    displayName: 'Sidebar',
+    displayName: "Sidebar",
 
     render: function () {
         return React.createElement(
-            'div',
-            { className: 'sideBar' },
+            "div",
+            { className: "sideBar shadow" },
+            React.createElement("img", { src: this.props.user.avatar_url }),
             React.createElement(
-                'p',
+                "div",
                 null,
-                'Hello, I am here in the Sidebar this evening.'
+                React.createElement(
+                    "h1",
+                    null,
+                    this.props.user.name
+                )
+            ),
+            React.createElement(
+                "div",
+                null,
+                React.createElement(
+                    "a",
+                    { href: this.props.user.html_url },
+                    "@",
+                    this.props.user.login
+                )
             )
         );
     }
@@ -90,16 +126,16 @@ var Sidebar = React.createClass({
 });
 
 var Timeline = React.createClass({
-    displayName: 'Timeline',
+    displayName: "Timeline",
 
     render: function () {
         return React.createElement(
-            'div',
-            { className: 'timeline' },
+            "div",
+            { className: "timeline" },
             React.createElement(
-                'p',
+                "p",
                 null,
-                'This is your pilot speaking, from the timeline view...'
+                "This is your pilot speaking, from the timeline view..."
             )
         );
     }

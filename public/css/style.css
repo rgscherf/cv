@@ -1,33 +1,99 @@
 .searchBox {
     display: flex;
     flex-direction: row;
-    height: 100;
     align-items: center;
+    height: 200;
     font-size: 3em;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 20px;
+    background: #EDA639;
+    border-radius: 3px;
 }
-
-.logo {
-    width: 10%;
+.titleBox {
+    width: 50%;
+    color: black;
+}
+#logo {
+    text-align: center;
     margin: auto;
+    font-size: 100px;
+    font-family: 'Bungee Shade', cursive;
+}
+#definition {
+    text-align: center;
+    font-size: 20px;
 }
 .mainSearch {
-    width: 80%;
+    width: 40%;
+    margin-left: 20px;
     font-size: 1em;
 }
 
-.contentContainer {
+.shadow {
+    -webkit-box-shadow: 4px 4px 10px 0px rgba(194,194,194,1);
+    -moz-box-shadow: 4px 4px 10px 0px rgba(194,194,194,1);
+    box-shadow: 4px 4px 10px 0px rgba(194,194,194,1);
 }
+
+body {
+    background: #f5ede3;
+    color: #292f33;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input[type=text] {
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+    background-color: #EDA639;
+    color: black;
+}
+input[type=text]:focus {
+    outline: none;
+}
+::-webkit-input-placeholder {
+   color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+:-ms-input-placeholder {  
+   color: black;  
+}
+
 
 .sidebar {
     padding: 10px;
     float: left;
     width: 30%;
-    background-color: pink;
+    background: #EDA639;
+    margin-right: 20px;
+}
+
+.sidebar img {
+    width: 100%;
+    border: 1px solid black;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sidebar p {
+    font-size: 3em;
 }
 
 .timeline {
     padding: 10px;
-    background-color: green;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 48px;
 }
