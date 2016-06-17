@@ -51,6 +51,9 @@ class TwitIndex extends CI_Controller {
             return $ret;
         }, $map);
         $val['commits'] = $commits;
+        
+        header('Content-type: application/json');
+        header('Access-Control-Allow-Origin: *'); 
         echo json_encode($val);
 
         // echo json_encode($val);

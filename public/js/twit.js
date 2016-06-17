@@ -144,13 +144,13 @@ var SearchBox = React.createClass({
     loadCommentsFromServer: function (query) {
         // var u = 'http://localhost:5000/index.php/twit/' + query;
         var u = 'https://phptwit.herokuapp.com/index.php/twit/' + query;
-        console.log(u);
         $.ajax(u, {
             type: 'POST',
-            dataType: 'jsonp',
+            dataType: 'json',
+            crossDomain: true,
+            contentType: "application/x-www-form-urlencoded",
             cache: false,
             success: function (data) {
-                console.log(data);
                 this.setState({ user: data, error: false });
             }.bind(this),
             error: function (xhr, status, err) {
@@ -264,7 +264,6 @@ var Timeline = React.createClass({
         var a = $.map(this.props.commits, function (e) {
             return e;
         });
-        console.log(a);
         var c = $.map(a, function (elem) {
             return React.createElement(
                 "div",
@@ -292,7 +291,6 @@ var Timeline = React.createClass({
                 )
             );
         });
-        console.log(c);
         return React.createElement(
             "div",
             { className: "timeline" },
