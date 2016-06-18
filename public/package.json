@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "babel src/ --watch js/"
+    "build": "babel src/ --watch --out-dir js/"
   },
   "author": "",
   "license": "ISC",
