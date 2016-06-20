@@ -1,0 +1,56 @@
+body {
+    background: rgb(255, 254, 236);
+    color: rgb(68, 67, 71);
+}
+.sectionHeader {
+    font-family: 'Arvo', serif;
+    border-top: 3px solid rgb(68,67,71);
+    border-bottom: 2px dotted rgb(68,67,71);
+    width: 90%;
+    font-size: 36px;
+    padding: 10px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sectionBody {
+    width: 90%;
+    font-size: 16px;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#headline {
+    font-family: 'Arvo', serif;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#subline {
+    font-family: 'Arvo', serif;
+    font-size: 16px;
+    text-align:center;
+    color: #57565A;
+}
+
+#skillsHard {
+    float: left;
+    width: 40%;
+}
+
+#skillsSoft {
+    width: 40%;
+    border-left: 3px dotted rgb(68,67,71);
+}
+
+/*
+font-family: 'Poiret One', cursive;
+font-family: 'Patua One', cursive;
+font-family: 'Simonetta', cursive;
+font-family: 'Codystar', cursive;
+font-family: 'Monofett', cursive;
+font-family: 'Lato', sans-serif;
+*/
