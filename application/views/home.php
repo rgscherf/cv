@@ -78,7 +78,17 @@
                         <table>
                             <tr>
                                 <td>Python</td>
-                                <td class="skillIcon">
+                                <td class="experienceIcon">
+                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>HTML & CSS</td>
+                                <td class="experienceIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
@@ -88,7 +98,7 @@
                             </tr>
                             <tr>
                                 <td>JavaScript</td>
-                                <td class="skillIcon">
+                                <td class="experienceIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
@@ -96,8 +106,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>HTML & CSS</td>
-                                <td class="skillIcon">
+                                <td>Elm</td>
+                                <td class="experienceIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
@@ -106,16 +116,8 @@
                             </tr>
                             <tr>
                                 <td>C#</td>
-                                <td class="skillIcon">
+                                <td class="experienceIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Java</td>
-                                <td class="skillIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
@@ -127,7 +129,7 @@
                         <table>
                             <tr>
                                 <td>Communications</td>
-                                <td class="skillIcon">
+                                <td class="experienceIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
@@ -137,17 +139,7 @@
                             </tr>
                             <tr>
                                 <td>Project Management</td>
-                                <td class="skillIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Teamwork</td>
-                                <td class="skillIcon">
+                                <td class="experienceIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
@@ -157,7 +149,7 @@
                             </tr>
                             <tr>
                                 <td>Leadership</td>
-                                <td class="skillIcon">
+                                <td class="experienceIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
@@ -166,10 +158,16 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Writing</td>
-                                <td class="skillIcon">
+                                <td>Java</td>
+                                <td class="experienceIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PHP</td>
+                                <td class="experienceIcon">
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
                                     <i class="fa fa-star fa-3x" aria-hidden="true"></i>
@@ -196,7 +194,8 @@
                             <td class="projectTableSpacer"></td>
                             <td>
                                 <div>
-                                    Simple, sane aggregation for public service job postings.
+                                    Simple, sane aggregation for public service job postings. <br />
+                                    Django / BeautifulSoup / Elm
                                 </div>
                             </td>
                         </tr>
@@ -211,7 +210,8 @@
                             <td class="projectTableSpacer"></td>
                             <td>
                                 <div>
-                                    Github commit timeline and explorer.
+                                    Github commit timeline and explorer. <br />
+                                    React / CodeIgniter
                                 </div>
                             </td>
                         </tr>
@@ -226,7 +226,8 @@
                             <td class="projectTableSpacer"></td>
                             <td>
                                 <div>
-                                    Award-winning retro action game made in one weekend.
+                                    Award-winning retro action game made in one weekend. <br />
+                                    Unity / C#
                                 </div>
                             </td>
                         </tr>
@@ -246,7 +247,7 @@
                 <div class="sectionBody" id="contactCards">
                     <div class="experienceCard">
                         <div class="fontAwesomeStack">
-                            <i class="fa fa-mobile fa-2x contactIcon" aria-hidden="true"></i>
+                            <i class="fa fa-mobile fa-2x experienceIcon" aria-hidden="true"></i>
                         </div>
                         <div class="experienceDescription">
                             416-779-2474
@@ -254,7 +255,7 @@
                     </div>
                     <div class="experienceCard">
                         <div class="fontAwesomeStack">
-                            <i class="fa fa-envelope-o fa-2x contactIcon" aria-hidden="true"></i>
+                            <i class="fa fa-envelope-o fa-2x experienceIcon" aria-hidden="true"></i>
                         </div>
                         <div class="experienceDescription">
                             rgscherf@gmail.com
@@ -262,7 +263,7 @@
                     </div>
                     <div class="experienceCard">
                         <div class="fontAwesomeStack">
-                            <i class="fa fa-twitter fa-2x contactIcon" aria-hidden="true"></i>
+                            <i class="fa fa-twitter fa-2x experienceIcon" aria-hidden="true"></i>
                         </div>
                         <div class="experienceDescription">
                             @rgscherf
@@ -270,7 +271,7 @@
                     </div>
                     <div class="experienceCard">
                         <div class="fontAwesomeStack">
-                            <i class="fa fa-github fa-2x contactIcon" aria-hidden="true"></i>
+                            <i class="fa fa-github fa-2x experienceIcon" aria-hidden="true"></i>
                         </div>
                         <div class="experienceDescription">
                             rgscherf
