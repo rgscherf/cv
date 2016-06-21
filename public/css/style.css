@@ -1,3 +1,5 @@
+/* GENERAL */
+
 body {
   background: rgb(255, 254, 236);
   color: rgb(68, 67, 71);
@@ -32,6 +34,9 @@ td {
   margin-left: auto;
 }
 
+
+/* PAGE HEADER */
+
 #headline {
   font-family: 'Arvo', serif;
   font-size: 80px;
@@ -46,23 +51,8 @@ td {
   color: #57565A;
 }
 
-#skillsHard {
-  font-family: 'Arvo', serif;
-  padding: 10px;
-  float: left;
-  width: 45%;
-  border-right: 2px dotted rgb(68, 67, 71);
-}
 
-#skillsSoft {
-  font-family: 'Arvo', serif;
-  padding: 10px;
-  margin-left: 51%;
-}
-
-.skillIcon {
-  color: rgb(188,144,199);
-}
+/* EXPERIENCE */
 
 #experienceCards {
   display:flex;
@@ -85,6 +75,91 @@ td {
   color: rgb(119,170,198);
 }
 
+
+/* SKILLS */
+
+#skillsHard {
+  font-family: 'Arvo', serif;
+  padding: 10px;
+  float: left;
+  width: 45%;
+  border-right: 2px dotted rgb(68, 67, 71);
+}
+
+#skillsSoft {
+  font-family: 'Arvo', serif;
+  padding: 10px;
+  margin-left: 51%;
+}
+
+.skillIcon {
+  color: rgb(188,144,199);
+}
+
+
+/* SELECTED PROJECTS */
+
+#projectTable {
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+}
+#projectTable tr {
+    height: 120px;
+}
+.projectTableSpacer {
+    width: 30px;
+}
+
+.projectLogoContainer {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    border: 1px solid rgb(68, 67, 71);
+    border-radius: 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.projectSpan {
+    position: relative;
+}
+
+#projectLogoGainful {
+    background: rgb(106,206,172);
+    color: rgb(6,8,6);
+}
+#projectSpanGainful {
+    font-size: 60px;
+    font-family: 'Lobster Two', cursive;
+    top: 10%;
+}
+
+#projectLogoTwit {
+    background: rgb(235,165,69);
+    color: black;
+}
+#projectSpanTwit {
+    font-size: 60px;
+    font-family: 'Bungee Shade', cursive;
+    top: 10%;
+}
+
+#projectLogoLord {
+    background: black;
+    color: rgb(178,86,225);
+}
+#projectSpanLord {
+    font-size: 40px;
+    font-family: 'VT323', monospace;
+    top: 28%;
+}
+
+
+/* CONTACT INFO */
+
 #contactCards {
   display:flex;
   justify-content: space-around;
@@ -96,8 +171,6 @@ td {
 .contactIcon {
     color: #FF6A00;
 }
-
-
 
 
 /*

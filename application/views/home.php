@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>@rgschef cv</title>
+        <title>rgscherf-cv</title>
         <link rel="stylesheet" href="../css/style.css">
         <script src="https://use.fontawesome.com/3214b7792e.js"></script>
         <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -182,6 +182,56 @@
             <div id="projects">
                 <div class="sectionHeader">
                     Selected Projects
+                </div>
+                <div class="sectionBody">
+                    <table id="projectTable">
+                        <tr>
+                            <td>
+                                <a href="http://gainful.work">
+                                    <div id="projectLogoGainful" class="projectLogoContainer">
+                                        <span id="projectSpanGainful" class="projectSpan">Gainful</span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="projectTableSpacer"></td>
+                            <td>
+                                <div>
+                                    Simple, sane aggregation for public service job postings.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://phptwit.herokuapp.com">
+                                    <div id="projectLogoTwit" class="projectLogoContainer">
+                                        <span id="projectSpanTwit" class="projectSpan">TWIT</span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="projectTableSpacer"></td>
+                            <td>
+                                <div>
+                                    Github commit timeline and explorer.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://rgscherf.itch.io/potion-lord">
+                                    <div id="projectLogoLord" class="projectLogoContainer">
+                                        <span id="projectSpanLord" class="projectSpan">POTION LORD</span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="projectTableSpacer"></td>
+                            <td>
+                                <div>
+                                    Award-winning retro action game made in one weekend.
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
                 </div>
             </div>
             <div id="commits">
