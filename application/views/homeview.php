@@ -8,11 +8,13 @@
     </head>
     <body>
         <div id="contentWrapper">
-            <div id="headline">
-                Robert Scherf
-            </div>
-            <div id="subline">
-                I make software.
+            <div id="headerWrapper">
+                <div id="headline">
+                    Robert Scherf
+                </div>
+                <div id="subline">
+                    I make software.
+                </div>
             </div>
             <div id="experience">
                 <div class="sectionHeader">
@@ -71,7 +73,7 @@
             </div>
             <div id=skills>
                 <div class="sectionHeader">
-                    Skillset
+                    Skills
                 </div>
                 <div class="sectionBody">
                     <div id="skillsHard">
@@ -211,7 +213,7 @@
                             <td>
                                 <div>
                                     Github commit timeline and explorer. <br />
-                                    React / CodeIgniter
+                                    CodeIgniter / React
                                 </div>
                             </td>
                         </tr>
@@ -231,13 +233,80 @@
                                 </div>
                             </td>
                         </tr>
-
                     </table>
                 </div>
             </div>
             <div id="commits">
                 <div class="sectionHeader">
                     Latest Commits
+                </div>
+                <div class="sectionBody" id="commitCards">
+                    <div class="commitCard">
+                        <div>
+                            <a href="">8bb6e17</a> to <a href="">rgscherf/twit</a>
+                        </div>
+                        <div class="commitMessage">
+                            new hard skills and skillset layout adjustment                        
+                        </div>
+                        <div style="text-align: right;">
+                            June 21, 4:56AM
+                        </div>
+                    </div>
+                    <div class="commitCard">
+                        <div>
+                            Commit #LSHY764 to rgscherf/twit
+                        </div>
+                        <div>
+                            layout for selected projects
+                        </div>
+                        <div style="text-align: right;">
+                            June 21, 4:56AM
+                        </div>
+                    </div>
+                    <div class="commitCard">
+                        <div>
+                            Commit #LSHY764 to rgscherf/twit
+                        </div>
+                        <div>
+                            Commit message hello there!
+                        </div>
+                        <div style="text-align: right;">
+                            June 21, 4:56AM
+                        </div>
+                    </div>
+                    <div class="commitCard">
+                        <div>
+                            Commit #LSHY764 to rgscherf/twit
+                        </div>
+                        <div>
+                            Commit message hello there!
+                        </div>
+                        <div style="text-align: right;">
+                            June 21, 4:56AM
+                        </div>
+                    </div>
+                    <div class="commitCard">
+                        <div>
+                            Commit #LSHY764 to rgscherf/twit
+                        </div>
+                        <div>
+                            Commit message hello there!
+                        </div>
+                        <div style="text-align: right;">
+                            June 21, 4:56AM
+                        </div>
+                    </div>
+                    <div class="commitCard">
+                        <div>
+                            Commit #LSHY764 to rgscherf/twit
+                        </div>
+                        <div>
+                            Commit message hello there!
+                        </div>
+                        <div style="text-align: right;">
+                            June 21, 4:56AM
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="contact">
