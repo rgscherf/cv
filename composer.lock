@@ -263,16 +263,16 @@
     "packages-dev": [
         {
             "name": "heroku/heroku-buildpack-php",
-            "version": "v106",
+            "version": "v107",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "fd9fed742b2b815d2299487d83d28ebe9f9ddf61"
+                "reference": "118cfbb3e6940bd6c1a953b0c482f458582162a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/fd9fed742b2b815d2299487d83d28ebe9f9ddf61",
-                "reference": "fd9fed742b2b815d2299487d83d28ebe9f9ddf61",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/118cfbb3e6940bd6c1a953b0c482f458582162a6",
+                "reference": "118cfbb3e6940bd6c1a953b0c482f458582162a6",
                 "shasum": ""
             },
             "bin": [
@@ -303,7 +303,7 @@
                 "nginx",
                 "php"
             ],
-            "time": "2016-06-08 15:35:38"
+            "time": "2016-06-17 22:36:40"
         },
         {
             "name": "mikey179/vfsStream",
