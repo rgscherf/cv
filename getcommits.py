@@ -28,10 +28,12 @@ def get_user_info(username):
     user_request = requests.get(user_url)
     user_obj = user_request.json()
 
-    out = {}
-    out["name"] = user_obj["name"]
-    out["login"] = user_obj["login"]
-    out["avatar_url"] = user_obj["avatar_url"]
+    out = {
+        "name": user_obj["name"],
+        "login": user_obj["login"],
+        "avatar_url": user_obj["avatar_url"]
+    }
+
     return out
 
 def get_commits(userdict):
@@ -43,18 +45,18 @@ def get_commits(userdict):
     for e in es:
         if e["type"] == "PushEvent":
             for c in e["payload"]["commits"]:
-                o = {}
-                o["message"] = c["message"]
-                o["repo_url"] = "https://github.com/{0}".format(e["repo"]["name"])
-                o["commit_url"] = "{0}/commit/{1}".format(o["repo_url"], c["sha"])
-                # https://github.com/rgscherf/cv/commit/70172c8e0c1c9fa3ed243782fa97f79e7e2a0c18
-                o["sha"] = c["sha"][:7]
-                o["timestamp"] = date_from_timestamp(e["created_at"])
+                repo_url = "https://github.com/{0}".format(e["repo"]["name"])
+                o = {
+                    "message": c["message"],
+                    "repo_url": repo_url,
+                    "commit_url": "{0}/commit/{1}".format(repo_url, c["sha"]),
+                    "sha": c["sha"][:7],
+                    "timestamp_raw": e["created_at"], # for proper sorting by time
+                    "timestamp": date_from_timestamp(e["created_at"]) # for pretty time
+                }
                 clean_events.append(o)
-    # reverse-sort by date
-    # TODO: because dates are stored in a month-first string, this will be wonky.
-    # consider saving a separate timestamp field for true sorting!
-    clean_events = sorted(clean_events, key=lambda k: k["timestamp"], reverse=True)
+
+    clean_events = sorted(clean_events, key=lambda k: k["timestamp_raw"], reverse=True)
     userdict["events"] = clean_events
     return userdict
 
