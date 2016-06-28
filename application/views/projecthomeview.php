@@ -40,7 +40,7 @@
                     </div>
                     <div class="experienceCard">
                         <div class="fontAwesomeStack">
-                            <i class="fa fa-university fa-2x experienceIcon" aria-hidden="true"></i>
+                            <i class="fa fa-paragraph fa-2x experienceIcon" aria-hidden="true"></i>
                         </div>
                         <div class="experienceDescription">
                             <div>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="experienceCard">
                         <div class="fontAwesomeStack">
-                            <i class="fa fa-code fa-2x experienceIcon" aria-hidden="true"></i>
+                            <i class="fa fa-terminal fa-2x experienceIcon" aria-hidden="true"></i>
                         </div>
                         <div class="experienceDescription">
                             <div>
@@ -82,48 +82,48 @@
                             <tr>
                                 <td>Python</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td>HTML & CSS</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td>JavaScript</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Elm</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td>C#</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                         </table>
@@ -133,47 +133,47 @@
                             <tr>
                                 <td>Communications</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Project Management</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Leadership</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Java</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td>PHP</td>
                                 <td class="experienceIcon">
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
-                                    <i class="fa fa-star fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
+                                    <i class="fa fa-cube fa-3x" aria-hidden="true"></i>
                                 </td>
                             </tr>
                         </table>
@@ -316,36 +316,24 @@
                 </div>
                 <div class="sectionBody" id="contactCards">
                     <div class="experienceCard">
-                        <div class="fontAwesomeStack">
-                            <i class="fa fa-mobile fa-2x experienceIcon" aria-hidden="true"></i>
-                        </div>
-                        <div class="experienceDescription">
-                            416-779-2474
-                        </div>
+                            <a href="mailto:rgscherf@gmail.com">
+                            <i class="fa fa-envelope-o fa-3x experienceIcon" aria-hidden="true"></i>
+                            </a>
                     </div>
                     <div class="experienceCard">
-                        <div class="fontAwesomeStack">
-                            <i class="fa fa-envelope-o fa-2x experienceIcon" aria-hidden="true"></i>
-                        </div>
-                        <div class="experienceDescription">
-                            rgscherf@gmail.com
-                        </div>
+                            <a href="http://twitter.com/rgscherf">
+                            <i class="fa fa-twitter fa-3x experienceIcon" aria-hidden="true"></i>
+                            </a>
                     </div>
                     <div class="experienceCard">
-                        <div class="fontAwesomeStack">
-                            <i class="fa fa-twitter fa-2x experienceIcon" aria-hidden="true"></i>
-                        </div>
-                        <div class="experienceDescription">
-                            @rgscherf
-                        </div>
+                            <a href="https://github.com/rgscherf">
+                            <i class="fa fa-github fa-3x experienceIcon" aria-hidden="true"></i>
+                            </a>
                     </div>
                     <div class="experienceCard">
-                        <div class="fontAwesomeStack">
-                            <i class="fa fa-github fa-2x experienceIcon" aria-hidden="true"></i>
-                        </div>
-                        <div class="experienceDescription">
-                            rgscherf
-                        </div>
+                            <a href="https://ca.linkedin.com/in/rgscherf">
+                            <i class="fa fa-linkedin-square fa-3x experienceIcon" aria-hidden="true"></i>
+                            </a>
                     </div>
                 </div>
             </div>

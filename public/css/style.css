@@ -1,12 +1,25 @@
 /* GENERAL */
 
 body {
-  background: rgb(255, 254, 236);
+  background: #EDDDBC;
+  /*background: rgb(255, 254, 236);*/
   color: rgb(68, 67, 71);
 }
 
 td {
   padding-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+  color: rgb(68, 67, 71);
+}
+
+a:link {
+  color: rgb(68, 67, 71);
 }
 
 #contentWrapper {
@@ -21,7 +34,8 @@ td {
   width: 90%;
   font-size: 36px;
   padding: 10px;
-  margin-top: 40px;
+  margin-top: 60px;
+  margin-bottom: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -72,12 +86,11 @@ td {
 }
 
 .experienceIcon {
-  color: rgb(119,170,198);
+  color: #63A3BB;
 }
 
 
 /* SKILLS */
-
 #skillsHard {
   font-family: 'Arvo', serif;
   padding: 10px;
@@ -91,11 +104,6 @@ td {
   padding: 10px;
   margin-left: 51%;
 }
-
-.skillIcon {
-  color: rgb(188,144,199);
-}
-
 
 /* SELECTED PROJECTS */
 
@@ -117,10 +125,6 @@ td {
     text-align: center;
     border: 1px solid rgb(68, 67, 71);
     border-radius: 2px;
-}
-
-a {
-    text-decoration: none;
 }
 
 .projectSpan {
@@ -190,12 +194,8 @@ a {
   align-items: center;
   flex-wrap: wrap;
   font-size: 24;
+  margin-bottom: 30px;
 }
-
-.contactIcon {
-    color: #FF6A00;
-}
-
 
 /*
 font-family: 'Lobster Two', cursive;
