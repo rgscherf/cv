@@ -22,6 +22,10 @@ a:link {
   color: rgb(68, 67, 71);
 }
 
+.arvo {
+  font-family: 'Arvo', serif;
+}
+
 #contentWrapper {
     max-width: 1100px;
     margin: auto;
@@ -34,8 +38,8 @@ a:link {
   width: 90%;
   font-size: 36px;
   padding: 10px;
-  margin-top: 60px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -76,33 +80,50 @@ a:link {
 }
 
 .experienceCard {
-  margin-top: 20px;
   display:flex;
   align-items: center;
 }
 
 .experienceDescription {
   padding: 15px;
+  padding-left: 20px;
 }
 
 .experienceIcon {
   color: #63A3BB;
 }
 
+/*SKILLS SPECIAL HEADER*/
 
-/* SKILLS */
-#skillsHard {
-  font-family: 'Arvo', serif;
-  padding: 10px;
-  float: left;
-  width: 45%;
-  border-right: 2px dotted rgb(68, 67, 71);
+#skillsHeaderWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#skillsSoft {
+#skillsLegend {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* SKILLS */
+
+.skillWrapper {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
   font-family: 'Arvo', serif;
   padding: 10px;
-  margin-left: 51%;
+  font-size: 20px;
+}
+
+.skillSpacer {
+  width: 20px;
 }
 
 /* SELECTED PROJECTS */
@@ -194,11 +215,5 @@ a:link {
   align-items: center;
   flex-wrap: wrap;
   font-size: 24;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
-
-/*
-font-family: 'Lobster Two', cursive;
-font-family: 'Bungee Shade', cursive;
-font-family: 'VT323', monospace;
-*/
