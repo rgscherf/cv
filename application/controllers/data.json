@@ -1,6 +1,6 @@
 {
     "name": "Robert Scherf",
-    "blurb": "I make software and live in Toronto.",
+    "blurb": "I make software and live in Toronto. <br/> hello world",
     "experience": [
         {
             "fontawesome_pointer": "graduation-cap",
@@ -11,7 +11,7 @@
         {
             "fontawesome_pointer": "paragraph",
             "time": "2015 - Present",
-            "title": "Sr. Communications Consultant",
+            "title": "Communications Consultant",
             "description": "Ontario Government"
         },
         {
@@ -24,45 +24,45 @@
     "skillsLeft": [
         {
             "name": "Project Management",
-            "level": 5
+            "level": 4
         },
         {
             "name": "Communication",
-            "level": 5
+            "level": 4
         },
         {
             "name": "Leadership",
-            "level": 5
+            "level": 4
         },
         {
             "name": "Python",
-            "level": 5
+            "level": 4
         },
         {
             "name": "HTML & CSS",
-            "level": 4
+            "level": 3
         }
     ],
     "skillsRight": [
         {
             "name": "JavaScript",
-            "level": 4
+            "level": 3
         },
         {
             "name": "Elm",
-            "level": 4
+            "level": 3
         },
         {
             "name": "C#",
-            "level": 4
+            "level": 3
         },
         {
             "name": "Java",
-            "level": 3
+            "level": 2
         },
         {
             "name": "PHP",
-            "level": 3
+            "level": 2
         }
     ],
     "contact": [

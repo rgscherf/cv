@@ -75,13 +75,14 @@ a:link {
 #experienceCards {
   display:flex;
   justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
+  padding-left: 50px;
 }
 
 .experienceCard {
   display:flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 .experienceDescription {
@@ -104,11 +105,17 @@ a:link {
 #skillsLegend {
   display: flex;
   justify-content: flex-end;
-  align-content: center;
+  align-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
   font-size: 16px;
+}
+
+#skillsLegend > div {
+  flex: 1 0 auto;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* SKILLS */
@@ -124,6 +131,21 @@ a:link {
 
 .skillSpacer {
   width: 20px;
+}
+
+.skillSide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.skillName {
+  font-size: 20px;
+}
+.skillLevel {
+  font-size: 16px;
+  width: 200px;
 }
 
 /* SELECTED PROJECTS */

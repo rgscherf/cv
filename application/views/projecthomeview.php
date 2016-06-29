@@ -24,7 +24,7 @@
                 <div class="sectionBody" id="experienceCards">
                     <?php foreach($experience as $e) { ?>
                     <div class="experienceCard">
-                        <div class="fontAwesomeStack">
+                        <div class="fontAwesomeStack" style="width:52px;text-align:center;">
                             <i class="fa fa-<?php echo $e['fontawesome_pointer'] ?> fa-2x experienceIcon" aria-hidden="true"></i>
                         </div>
                         <div class="experienceDescription">
@@ -44,22 +44,22 @@
                 <div id=skills>
                     <div class="sectionHeader">
                         <div id="skillsHeaderWrapper">
-                            <div>
+                            <div style="padding-right: 30px;">
                                 Skills
                             </div>
                             <div>
                                 <div id="skillsLegend">
-                                    <div style="margin-right:40px;">
+                                    <div>
                                         <div>
-                                            <?php for($i=0; $i<5; $i++) { ?>
+                                            <?php for($i=0; $i<4; $i++) { ?>
                                             <i class="fa fa-cube fa" aria-hidden="true"></i>
                                             <?php } ?>
                                         </div>
                                         <div class="arvo">Expert</div>
                                     </div>
-                                    <div style="margin-right:40px;">
+                                    <div>
                                         <div>
-                                            <?php for($i=0; $i<4; $i++) { ?>
+                                            <?php for($i=0; $i<3; $i++) { ?>
                                             <i class="fa fa-cube fa" aria-hidden="true"></i>
                                             <?php } ?>
                                         </div>
@@ -67,7 +67,7 @@
                                     </div>
                                     <div>
                                         <div>
-                                            <?php for($i=0; $i<3; $i++) { ?>
+                                            <?php for($i=0; $i<2; $i++) { ?>
                                             <i class="fa fa-cube fa" aria-hidden="true"></i>
                                             <?php } ?>
                                         </div>
@@ -78,40 +78,30 @@
                         </div>
                     </div>
                     <div class="sectionBody">
-                        <div class="skillWrapper">
-                            <div class="skillTable">
-                                <table>
-                                    <?php foreach($skillsLeft as $sl) { ?>
-                                    <tr>
-                                        <td style="font-size:20px;">
-                                            <?php echo $sl["name"]; ?>
-                                        </td>
-                                        <td class="skillSpacer"></td>
-                                        <td>
-                                            <?php for($i = 0; $i < $sl["level"]; $i++) { ?>
-                                            <i class="experienceIcon fa fa-cube fa-2x" aria-hidden="true"></i>
-                                            <?php } ?>
-                                        </td>
-                                    </tr>
-                                    <?php } ?>
-                                </table>
+                        <div class="skillWrapper" style="margin-left:50px;">
+                            <div>
+                                <?php foreach($skillsLeft as $sl) { ?>
+                                <div class="skillSide">
+                                    <div class="skillName" style="width:250px;"><?php echo $sl["name"]; ?></div>
+                                    <div class="skillLevel">
+                                        <?php for($i=0; $i < $sl["level"]; $i++) { ?>
+                                        <i class="experienceIcon fa fa-cube fa-2x" aria-hidden="true"></i>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                                <?php } ?>
                             </div>
-                            <div class="skillTable">
-                                <table>
-                                    <?php foreach($skillsRight as $sl) { ?>
-                                    <tr>
-                                        <td style="font-size:20px;">
-                                            <?php echo $sl["name"]; ?>
-                                        </td>
-                                        <td class="skillSpacer"></td>
-                                        <td>
-                                            <?php for($i = 0; $i < $sl["level"]; $i++) { ?>
-                                            <i class="experienceIcon fa fa-cube fa-2x" aria-hidden="true"></i>
-                                            <?php } ?>
-                                        </td>
-                                    </tr>
-                                    <?php } ?>
-                                </table>
+                            <div>
+                                <?php foreach($skillsRight as $sl) { ?>
+                                <div class="skillSide">
+                                    <div class="skillName" style="width:180px;"><?php echo $sl["name"]; ?></div>
+                                    <div class="skillLevel">
+                                        <?php for($i=0; $i < $sl["level"]; $i++) { ?>
+                                        <i class="experienceIcon fa fa-cube fa-2x" aria-hidden="true"></i>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -252,7 +242,7 @@
                     </div>
                     <div class="sectionBody" id="contactCards">
                         <?php foreach($contact as $c) { ?>
-                        <div class="experienceCard">
+                        <div>
                             <a href="<?php echo $c['link'] ?>">
                                 <i class="fa fa-<?php echo $c['fontawesome_pointer'] ?> fa-3x experienceIcon" aria-hidden="true"></i>
                             </a>
