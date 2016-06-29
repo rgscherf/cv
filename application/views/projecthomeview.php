@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
         <script src="https://use.fontawesome.com/3214b7792e.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Arvo|Bungee+Shade|Lobster+Two|VT323" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Bungee+Shade|Lobster+Two|VT323|Open+Sans" rel="stylesheet">
         <link rel="icon" type="image/png" href="../images/favicon.png">
     </head>
     <body>
