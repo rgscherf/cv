@@ -131,8 +131,8 @@
                             <tr>
                                 <td>
                                     <a href="http://phptwit.herokuapp.com">
-                                        <div id="projectLogoTwit" class="projectLogoContainer">
-                                            <span id="projectSpanTwit" class="projectSpan">TWIT</span>
+                                        <div id="projectLogoTwit" class="projectLogoContainer" style="position:relative;">
+                                            <div id="projectSpanTwit" class="projectSpan">TWIT</div>
                                         </div>
                                     </a>
                                 </td>

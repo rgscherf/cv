@@ -197,7 +197,9 @@ a:link {
 #projectSpanTwit {
     font-size: 60px;
     font-family: 'Bungee Shade', cursive;
-    top: 13px;
+    top: 10px;
+    position: absolute;
+    left: 5px;
 }
 
 #projectLogoLord {
