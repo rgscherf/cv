@@ -47,6 +47,7 @@ def get_commits(userdict):
                 repo_url = "https://github.com/{0}".format(e["repo"]["name"])
                 o = {
                     "message": c["message"],
+                    "repo_name": e["repo"]["name"],
                     "repo_url": repo_url,
                     "commit_url": "{0}/commit/{1}".format(repo_url, c["sha"]),
                     "sha": c["sha"][:7],
