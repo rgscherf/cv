@@ -221,8 +221,18 @@ a:link {
 }
 
 .commitMessage {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin:10 10;
+    border-left: 2px solid rgb(68, 67, 71);
+    padding-left: 10px;"
+}
+
+.commitInfoBlock {
+    font-size: 16px;
+    text-align: right;
+}
+
+.commitInfoBlock a {
+    color: #63A3BB;
 }
 
 /* CONTACT INFO */

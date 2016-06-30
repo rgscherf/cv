@@ -168,22 +168,26 @@
                         Latest Commits
                     </div>
                     <div class="sectionBody basicFlex">
-                    <?php foreach($commits["events"] as $c) { ?>
+                        <?php foreach($commits["events"] as $c) { ?>
                         <div class="commitCard">
-                            <div style="margin:10 10;border-left: 2px solid rgb(68, 67, 71); padding-left: 10px;">
+                            <div class="commitMessage">
                                 <?php echo $c["message"]; ?>
                             </div>
-                            <div style="font-size:16px;text-align:right;">
-                                <span>
-                                    <a style="color:#63A3BB;" href="<?php echo $c["commit_url"]; ?>">
-                                        <?php echo $c["sha"]; ?></a>
-                                    </span> to <a style="color:#63A3BB;" href="<?php echo $c['repo_url']; ?>"><?php echo $c["repo_name"]; ?></a>
-                            </div>
-                            <div style="text-align: right;font-size:16px;">
-                                <?php echo $c["timestamp"]; ?>
+                            <div class="commitInfoBlock">
+                                <div>
+                                    <a href="<?php echo $c['commit_url']; ?>">
+                                        <?php echo $c["sha"]; ?>
+                                    </a>
+                                    to <a class="commitLink" href="<?php echo $c['repo_url']; ?>">
+                                        <?php echo $c["repo_name"]; ?>
+                                    </a>
+                                </div>
+                                <div>
+                                    <?php echo $c["timestamp"]; ?>
+                                </div>
                             </div>
                         </div>
-                    <?php } ?>
+                        <?php } ?>
                     </div>
                 </div>
                 <div id="contact">
