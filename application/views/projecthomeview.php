@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
         <script src="https://use.fontawesome.com/3214b7792e.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Arvo|Bungee+Shade|Lobster+Two|VT323|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Bungee+Shade|Lobster+Two|VT323|Open+Sans|Roboto+Mono" rel="stylesheet">
         <link rel="icon" type="image/png" href="../images/favicon.png">
     </head>
     <body>
@@ -21,7 +21,7 @@
                 <div class="sectionHeader">
                     Education & Experience
                 </div>
-                <div class="sectionBody" id="experienceCards">
+                <div class="sectionBody basicFlex" id="experienceCards">
                     <?php foreach($experience as $e) { ?>
                     <div class="experienceCard">
                         <div class="fontAwesomeStack" style="width:52px;text-align:center;">
@@ -94,7 +94,7 @@
                             <div>
                                 <?php foreach($skillsRight as $sl) { ?>
                                 <div class="skillSide">
-                                    <div class="skillName" style="width:180px;"><?php echo $sl["name"]; ?></div>
+                                    <div class="skillName" style="width:150px;"><?php echo $sl["name"]; ?></div>
                                     <div class="skillLevel">
                                         <?php for($i=0; $i < $sl["level"]; $i++) { ?>
                                         <i class="experienceIcon fa fa-cube fa-2x" aria-hidden="true"></i>
@@ -167,80 +167,30 @@
                     <div class="sectionHeader">
                         Latest Commits
                     </div>
-                    <div class="sectionBody" id="commitCards">
+                    <div class="sectionBody basicFlex">
+                    <?php foreach($commits["events"] as $c) { ?>
                         <div class="commitCard">
-                            <div>
-                                <a href="">8bb6e17</a> to <a href="">rgscherf/twit</a>
+                            <div style="margin:10 10;border-left: 2px solid rgb(68, 67, 71); padding-left: 10px;">
+                                <?php echo $c["message"]; ?>
                             </div>
-                            <div class="commitMessage">
-                                new hard skills and skillset layout adjustment
+                            <div style="font-size:16px;text-align:right;">
+                                <span>
+                                    <a style="color:#63A3BB;" href="<?php echo $c["commit_url"]; ?>">
+                                        <?php echo $c["sha"]; ?></a>
+                                    </span> to <a style="color:#63A3BB;" href="<?php echo $c['repo_url']; ?>"><?php echo $c["repo_name"]; ?></a>
                             </div>
-                            <div style="text-align: right;">
-                                June 21, 4:56AM
+                            <div style="text-align: right;font-size:16px;">
+                                <?php echo $c["timestamp"]; ?>
                             </div>
                         </div>
-                        <div class="commitCard">
-                            <div>
-                                Commit #LSHY764 to rgscherf/twit
-                            </div>
-                            <div>
-                                layout for selected projects
-                            </div>
-                            <div style="text-align: right;">
-                                June 21, 4:56AM
-                            </div>
-                        </div>
-                        <div class="commitCard">
-                            <div>
-                                Commit #LSHY764 to rgscherf/twit
-                            </div>
-                            <div>
-                                Commit message hello there!
-                            </div>
-                            <div style="text-align: right;">
-                                June 21, 4:56AM
-                            </div>
-                        </div>
-                        <div class="commitCard">
-                            <div>
-                                Commit #LSHY764 to rgscherf/twit
-                            </div>
-                            <div>
-                                Commit message hello there!
-                            </div>
-                            <div style="text-align: right;">
-                                June 21, 4:56AM
-                            </div>
-                        </div>
-                        <div class="commitCard">
-                            <div>
-                                Commit #LSHY764 to rgscherf/twit
-                            </div>
-                            <div>
-                                Commit message hello there!
-                            </div>
-                            <div style="text-align: right;">
-                                June 21, 4:56AM
-                            </div>
-                        </div>
-                        <div class="commitCard">
-                            <div>
-                                Commit #LSHY764 to rgscherf/twit
-                            </div>
-                            <div>
-                                Commit message hello there!
-                            </div>
-                            <div style="text-align: right;">
-                                June 21, 4:56AM
-                            </div>
-                        </div>
+                    <?php } ?>
                     </div>
                 </div>
                 <div id="contact">
                     <div class="sectionHeader">
                         Contact
                     </div>
-                    <div class="sectionBody" id="contactCards">
+                    <div class="sectionBody basicFlex" id="contactCards">
                         <?php foreach($contact as $c) { ?>
                         <div>
                             <a href="<?php echo $c['link'] ?>">

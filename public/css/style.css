@@ -53,6 +53,14 @@ a:link {
   margin: 30 auto 30;
 }
 
+.basicFlex {
+  display:flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
 
 /* PAGE HEADER */
 
@@ -60,25 +68,23 @@ a:link {
   font-family: 'Arvo', serif;
   font-size: 100px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 #subline {
   font-family: 'Arvo', serif;
-  font-size: 16px;
+  font-size: 24px;
   color: #57565A;
-  width: 40%;
-  margin: 30 auto 40;
+  width: 50%;
+  margin: 0 auto 60;
+  text-align: center;
 }
 
 
 /* EXPERIENCE */
 
 #experienceCards {
-  display:flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 .experienceCard {
@@ -191,7 +197,7 @@ a:link {
 #projectSpanTwit {
     font-size: 60px;
     font-family: 'Bungee Shade', cursive;
-    top: 10%;
+    top: 13px;
 }
 
 #projectLogoLord {
@@ -206,20 +212,10 @@ a:link {
 
 /* COMMITS */
 
-#commitCards {
-    display:flex;
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
 .commitCard {
-    margin: 5 0;
-    border: 1px solid rgb(68, 67, 71);
-    border-radius: 2px;
+    margin: 15 5;
     width: 300px;
-    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .commitMessage {
@@ -227,14 +223,9 @@ a:link {
     padding-bottom: 10px;
 }
 
-
 /* CONTACT INFO */
 
 #contactCards {
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
   font-size: 24;
   margin-bottom: 50px;
 }
