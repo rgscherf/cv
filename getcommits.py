@@ -1,39 +1,31 @@
 import psycopg2
 import requests
-import sys
-import datetime as dt
 import dateutil.parser as du 
 import dateutil.tz as tz
+import urllib.parse as url
+from pprint import pprint
 
-# retrieve user's latest github commits
-# munge them to fill out fields
-# then save to database
 
-# SCHEMA:
-# id serial PRIMARY KEY, 
-# repo varchar, 
-# commit_time timestamp, 
-# commit_number varchar, 
-# commit_url varchar
+def make_connection():
+    result = url.urlparse("postgres://tzfdzuzkcpuzkk:KP0ZAdOmbl0NSXSt3KDC6jn40W@ec2-107-20-198-81.compute-1.amazonaws.com:5432/d46egkp3t0iet7")
+    username = result.username
+    password = result.password
+    database = result.path[1:]
+    hostname = result.hostname
+    connection = psycopg2.connect(
+        database = database,
+        user = username,
+        password = password,
+        host = hostname
+    ) 
+    return connection
+
 
 def date_from_timestamp(ts):
     eastern = tz.tzstr("EST5EDT")
     date = du.parse(ts).astimezone(eastern)
     datestr = date.strftime("%b %d %Y, %I:%M %p")
     return datestr
-
-# def get_user_info(username):
-#     user_url = "https://api.github.com/users/{0}".format(username)
-#     user_request = requests.get(user_url)
-#     user_obj = user_request.json()
-
-#     out = {
-#         "name": user_obj["name"],
-#         "login": user_obj["login"],
-#         "avatar_url": user_obj["avatar_url"]
-#     }
-
-#     return out
 
 def get_commits(user):
     events_url = "https://api.github.com/users/{0}/events".format(user)
@@ -57,35 +49,49 @@ def get_commits(user):
                 clean_events.append(o)
 
     clean_events = sorted(clean_events, key=lambda k: k["timestamp_raw"], reverse=True)
-    userdict = {}
-    userdict["events"] = clean_events
-    return userdict
+    return clean_events
 
 
-def check_insertion(commit):
-    conn = psycopg2.connect("postgres://tzfdzuzkcpuzkk:KP0ZAdOmbl0NSXSt3KDC6jn40W@ec2-107-20-198-81.compute-1.amazonaws.com:5432/d46egkp3t0iet7")
+def is_unique(commit):
+    conn = make_connection()
     cur = conn.cursor()
-    cur.execute("""DROP TABLE rcommits;""")
-    conn.commit()
+    cur.execute("""SELECT 1 FROM rcommits WHERE commit_url = %s""", (commit["commit_url"],))
+    curlen = len(cur.fetchall())
+
+    cur.close()
+    pprint(conn.isolation_level)
+    pprint(conn.notices)
+    conn.close()
+    if curlen == 0:
+        # print("{} is unique".format(commit['sha']))
+        return True
+    else:
+        # print("{} is not unique".format(commit['sha']))
+        return False
+
+def insert_commit(commit):
+    conn = make_connection()
+    cur = conn.cursor()
+    cur.execute("""INSERT INTO rcommits (sha, repo_url, timestamp_raw, timestamp_pretty, commit_url, message, repo_name)
+                        VALUES (%s, %s, %s, %s, %s, %s, %s) """, (commit["sha"],
+                                                                  commit["repo_url"],
+                                                                  commit["timestamp_raw"],
+                                                                  commit["timestamp_pretty"],
+                                                                  commit["commit_url"],
+                                                                  commit["message"],
+                                                                  commit["repo_name"]))
+    conn.commit
+    pprint(conn.status)
+    pprint(conn.notices)
     cur.close()
     conn.close()
 
-    pass
-
-def insert_commits(commits):
-    pass
-
 def main(username):
-    # conn = psycopg2.connect("dbname=rgscherf user=codeigniter")
-    # cur = conn.cursor()
 
-    # now = datetime.datetime.now()
-    # cur.execute("""INSERT INTO rcommits (repo, commit_time, commit_number, commit_url)
-    #                     VALUES (%(repo)s, %(commit_time)s, %(commit_numer)s, %(commit_url)s) """)
-
-    commits = get_commits(username)
-    # filter commits by test of whether it's in db
-    # insert each remaining commit into db
+    all_commits = get_commits(username)
+    unique_commits = [c for c in all_commits if is_unique(c)]
+    for c in unique_commits:
+        insert_commit(c)
 
 if __name__ == '__main__':
     main("rgscherf")
