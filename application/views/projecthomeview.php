@@ -183,7 +183,7 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <?php echo $c["timestamp"]; ?>
+                                    <?php echo $c["timestamp_pretty"]; ?>
                                 </div>
                             </div>
                         </div>

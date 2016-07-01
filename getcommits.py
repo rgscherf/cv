@@ -22,21 +22,21 @@ def date_from_timestamp(ts):
     datestr = date.strftime("%b %d %Y, %I:%M %p")
     return datestr
 
-def get_user_info(username):
-    user_url = "https://api.github.com/users/{0}".format(username)
-    user_request = requests.get(user_url)
-    user_obj = user_request.json()
+# def get_user_info(username):
+#     user_url = "https://api.github.com/users/{0}".format(username)
+#     user_request = requests.get(user_url)
+#     user_obj = user_request.json()
 
-    out = {
-        "name": user_obj["name"],
-        "login": user_obj["login"],
-        "avatar_url": user_obj["avatar_url"]
-    }
+#     out = {
+#         "name": user_obj["name"],
+#         "login": user_obj["login"],
+#         "avatar_url": user_obj["avatar_url"]
+#     }
 
-    return out
+#     return out
 
-def get_commits(userdict):
-    events_url = "https://api.github.com/users/{0}/events".format(userdict["login"])
+def get_commits(user):
+    events_url = "https://api.github.com/users/{0}/events".format(user)
     events = requests.get(events_url)
     es = events.json()
 
@@ -52,14 +52,28 @@ def get_commits(userdict):
                     "commit_url": "{0}/commit/{1}".format(repo_url, c["sha"]),
                     "sha": c["sha"][:7],
                     "timestamp_raw": e["created_at"], # for proper sorting by time
-                    "timestamp": date_from_timestamp(e["created_at"]) # for pretty time
+                    "timestamp_pretty": date_from_timestamp(e["created_at"]) # for pretty time
                 }
                 clean_events.append(o)
 
     clean_events = sorted(clean_events, key=lambda k: k["timestamp_raw"], reverse=True)
+    userdict = {}
     userdict["events"] = clean_events
     return userdict
 
+
+def check_insertion(commit):
+    conn = psycopg2.connect("postgres://tzfdzuzkcpuzkk:KP0ZAdOmbl0NSXSt3KDC6jn40W@ec2-107-20-198-81.compute-1.amazonaws.com:5432/d46egkp3t0iet7")
+    cur = conn.cursor()
+    cur.execute("""DROP TABLE rcommits;""")
+    conn.commit()
+    cur.close()
+    conn.close()
+
+    pass
+
+def insert_commits(commits):
+    pass
 
 def main(username):
     # conn = psycopg2.connect("dbname=rgscherf user=codeigniter")
@@ -68,9 +82,10 @@ def main(username):
     # now = datetime.datetime.now()
     # cur.execute("""INSERT INTO rcommits (repo, commit_time, commit_number, commit_url)
     #                     VALUES (%(repo)s, %(commit_time)s, %(commit_numer)s, %(commit_url)s) """)
-    user = get_user_info(username)
-    user = get_commits(user)
-    print(user)
+
+    commits = get_commits(username)
+    # filter commits by test of whether it's in db
+    # insert each remaining commit into db
 
 if __name__ == '__main__':
     main("rgscherf")
