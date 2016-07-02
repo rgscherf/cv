@@ -28,10 +28,11 @@ class ProjectHome extends CI_Controller {
             ];
             array_push($commits, $append);
         }
+        var_dump($commits);
         $commits = usort($commits, "sort_entry");
+        var_dump($commits);
         $commits = array_slice($commits, 0, 6);
         $data["commits"] = $commits;
-        var_dump($commits);
 
         // we only want the most recent 6 commits
         // $data["commits"]["events"] = array_slice($data["commits"]["events"], 0, 6);
