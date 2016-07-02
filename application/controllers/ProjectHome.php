@@ -28,17 +28,12 @@ class ProjectHome extends CI_Controller {
             ];
             array_push($commits, $append);
         }
-        var_dump($commits);
         usort($commits, function($a, $b) {
-            return $a["timestamp_raw"] - $b["timestamp_raw"];
+            return $a["timestamp_raw"] < $b["timestamp_raw"];
         });
-        var_dump($commits);
         $commits = array_slice($commits, 0, 6);
         $data["commits"] = $commits;
 
-        // we only want the most recent 6 commits
-        // $data["commits"]["events"] = array_slice($data["commits"]["events"], 0, 6);
-        
         $this->load->helper('url');
         $this->load->view('projecthomeview', $data);
     }
