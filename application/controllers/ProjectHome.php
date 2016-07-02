@@ -29,7 +29,9 @@ class ProjectHome extends CI_Controller {
             array_push($commits, $append);
         }
         var_dump($commits);
-        $commits = usort($commits, "sort_entry");
+        $commits = usort($commits, function($a, $b) {
+            return $a["timestamp_raw"] - $b["timestamp_raw"];
+        });
         var_dump($commits);
         $commits = array_slice($commits, 0, 6);
         $data["commits"] = $commits;
