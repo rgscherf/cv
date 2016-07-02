@@ -7,7 +7,7 @@ class ProjectHome extends CI_Controller {
         $data = json_decode($data, true);
 
         $this->load->database('default');
-        $this->db->query("SELECT * FROM rcommits");
+        $query = $this->db->query("SELECT * FROM rcommits");
         foreach ($query->result() as $row) {
             var_dump($row->sha);
         }
