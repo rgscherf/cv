@@ -167,7 +167,7 @@
                     <div class="sectionHeader">
                         Latest Commits
                     </div>
-                    <div class="sectionBody basicFlex">
+                    <div class="sectionBody basicFlex" style="align-items:flex-end;">
                         <?php foreach($commits as $c) { ?>
                         <div class="commitCard">
                             <div class="commitMessage">

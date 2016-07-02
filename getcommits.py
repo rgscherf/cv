@@ -45,7 +45,8 @@ def get_commits(user):
 def is_unique(commit):
     conn = make_connection()
     cur = conn.cursor()
-    cur.execute("""SELECT 1 FROM rcommits WHERE commit_url = %s""", (commit["commit_url"],))
+    cur.execute("""SELECT 1 FROM rcommits WHERE commit_url = %s OR sha = %s""", (commit["commit_url"],
+                                                                                 commit["sha"]))
     curlen = len(cur.fetchall())
     cur.close()
     conn.close()
