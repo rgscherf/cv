@@ -25,7 +25,7 @@ class ProjectHome extends CI_Controller {
                 "sha" => $row->sha,
                 "timestamp_raw" => $row->timestamp_raw,
                 "timestamp_pretty" => $row->timestamp_pretty
-            ]
+            ];
             array_push($commits, $append);
         }
         $commits = usort($commits, "sort_entry");
