@@ -64,7 +64,6 @@
     }],
 
     "commits": {
-        "name": "Rob Scherf",
         "events": [{
             "commit_url": "https://github.com/rgscherf/cv/commit/d3fa78e7240481843ad3522da09a64ba7344c18f",
             "repo_url": "https://github.com/rgscherf/cv",

@@ -168,7 +168,7 @@
                         Latest Commits
                     </div>
                     <div class="sectionBody basicFlex">
-                        <?php foreach($commits["events"] as $c) { ?>
+                        <?php foreach($commits as $c) { ?>
                         <div class="commitCard">
                             <div class="commitMessage">
                                 <?php echo $c["message"]; ?>
