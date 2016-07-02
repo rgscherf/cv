@@ -79,7 +79,7 @@ $db['default'] = array(
 	'username' => 'codeigniter',
 	'password' => 'password',
 	'database' => 'rgscherf',
-	'dbdriver' => 'postgre'
+	'dbdriver' => 'postgre',
 	'dbprefix' => '',
 	'pconnect' => TRUE,
 	'db_debug' => TRUE, // (ENVIRONMENT !== 'production'),
