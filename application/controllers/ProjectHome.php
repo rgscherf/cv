@@ -15,7 +15,7 @@ class ProjectHome extends CI_Controller {
 
         $this->load->database('default');
         $query = $this->db->query("SELECT * FROM rcommits");
-        $commits = []
+        $commits = [];
         foreach ($query->result() as $row) {
             $append = [
                 "message" => $row->message,
