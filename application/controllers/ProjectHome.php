@@ -1,13 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-function sort_entry($a, $b) {
-    if ($a["timestamp_raw"] == $b["timestamp_raw"]) {
-        return 0;
-    }
-    return ($a["timestamp_raw"] < $b["timestamp_raw"]) ? -1 : 1;
-}
-
 class ProjectHome extends CI_Controller {
     public function index() {
         $data = file_get_contents(__DIR__ . "/data.json");
