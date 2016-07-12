@@ -130,7 +130,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="http://phptwit.herokuapp.com">
+                                    <a href="http://twitbackend.herokuapp.com">
                                         <div id="projectLogoTwit" class="projectLogoContainer" style="position:relative;">
                                             <div id="projectSpanTwit" class="projectSpan">TWIT</div>
                                         </div>
@@ -140,7 +140,7 @@
                                 <td>
                                     <div>
                                         Github commit timeline and explorer. <br />
-                                        CodeIgniter / React
+                                        Express JS / React
                                     </div>
                                 </td>
                             </tr>
